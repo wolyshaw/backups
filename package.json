@@ -1,0 +1,22 @@
+{
+  "name": "backups",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolyshaw/backups.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "wolyshaw <shaw@xwlong.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolyshaw/backups/issues"
+  },
+  "homepage": "https://github.com/wolyshaw/backups#readme"
+}
