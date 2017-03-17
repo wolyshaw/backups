@@ -7,12 +7,12 @@ const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true'
 
 module.exports = {
   entry: {
-    vendor: ['react', 'react-dom', 'react-router-dom'],
+    vendor: ['react', 'react-dom', 'react-router-dom', 'history'],
     bundle: './src/index.js'
   },
   output: {
     filename: '[hash:5].[name].js',
-    path: path.resolve('./dev'),
+    path: path.resolve('./dist'),
     chunkFilename: '/[hash:5].[name].chunk.js'
   },
   module: {
@@ -27,11 +27,21 @@ module.exports = {
       loader: ExtractTextPlugin.extract({
         loader: ['style-loader!css-loader?modules&localIdentName=[name]--[local]--[hash:base64:5]']
       })
+    },
+    {
+      test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+      loader: 'url-loader?limit=50000&name=[path][name].[ext]'
     }
   ]
   },
+  resolve: {
+    alias: {
+      static: path.resolve(path.join(__dirname, 'src', 'static')),
+      components: path.resolve(path.join(__dirname, 'src', 'components'))
+    }
+  },
   plugins: [
-    new CleanPlugin(['dev'], {
+    new CleanPlugin(['dist'], {
       root: path.join(__dirname),
       verbose: true
     }),
