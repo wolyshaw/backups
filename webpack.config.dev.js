@@ -8,16 +8,12 @@ const hotMiddlewareScript = 'webpack-hot-middleware/client?reload=true'
 module.exports = {
   entry: {
     vendor: ['react', 'react-dom', 'react-router-dom', 'history'],
-    bundle: './src/index.js',
-    events: './src/event/index.js'
+    bundle: './src/index.js'
   },
   output: {
     filename: '[hash:5].[name].js',
     path: path.resolve('./dev'),
     chunkFilename: '/[hash:5].[name].chunk.js'
-  },
-  externals: {
-    electron: 'electron'
   },
   module: {
     loaders: [
