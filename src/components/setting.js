@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import styles from 'static/setting.css'
 
 const Qiniu = props => {
+  let submit = e => {
+    e.preventDefault()
+  }
   return (
-    <form className={styles.qiniu}>
+    <form className={styles.qiniu} onSubmit={submit}>
       <label>
         <span>AccessKey:</span>
         <input type="text"/>
@@ -31,7 +34,7 @@ export default class Setting extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      server: '1'
+      server: '0'
     }
   }
   render() {
