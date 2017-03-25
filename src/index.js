@@ -17,6 +17,8 @@ const MenuItem = props => (
   </li>
 )
 
+localStorage.setItem('test', 'value')
+
 const Main = props => {
   return (
     <Router history={history}>

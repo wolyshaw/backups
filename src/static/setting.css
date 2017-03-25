@@ -1,0 +1,41 @@
+.setting{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.choose{
+  display: block;
+  height: 50px;
+  margin: 40px auto;
+}
+.qiniu{
+  display: block;
+}
+.qiniu > label{
+  display: block;
+  margin: 40px auto;
+  width: 400px;
+  max-width: 80%;
+}
+.qiniu > label:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+.qiniu > label > span{
+  display: block;
+  width: 40%;
+  float: left;
+}
+.qiniu > label > input{
+  display: block;
+  float: left;
+  width: 60%;
+}
+.submit{
+  width: 400px;
+  max-width: 80%;
+  margin: auto;
+  height: 40px;
+  line-height: 40px;
+}

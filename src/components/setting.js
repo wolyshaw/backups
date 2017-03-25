@@ -25,7 +25,7 @@ const Qiniu = props => {
         <span>prefix:</span>
         <input type="text"/>
       </label>
-      <input type="submit" value="上传"/>
+      <input type="submit" className={styles.submit} value="保存"/>
     </form>
   )
 }
@@ -40,7 +40,7 @@ export default class Setting extends Component {
   render() {
     return(
       <div className={styles.setting}>
-        <label>
+        <label className={styles.choose}>
           <span>选择存储服务商：</span>
           <select defaultValue={this.state.server} onChange={e => this.setState({server: e.target.value})}>
             <option value="0">七牛</option>
